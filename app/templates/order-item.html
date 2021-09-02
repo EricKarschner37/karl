@@ -1,0 +1,14 @@
+<p class="squircle-border">
+{{order.temp|capitalize}}
+{% for flavor in order.flavors %}
+  {{ flavor }}{% if not loop.last %}, {% endif %}
+{% endfor %}
+latte with {{ order.milk }} milk<a onclick="removeOrder('{{ order._id }}')"><span class="clickable material-icons remove">delete</span></a>
+</p>
+
+<script type="text/javascript">
+  function removeOrder(id) {
+    document.getElementById("id").value = id;
+    document.getElementById("form").submit();
+  }
+</script>

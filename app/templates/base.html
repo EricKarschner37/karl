@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>{% block title %}{% endblock %} | Karl</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href={{url_for('static', filename='style.css') }} rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <br />
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/order">Order</a></li>
+            <li><a href="/orders">Active Orders</a></li>
+          </ul>
+        </nav>
+      </div>
+      <br />
+      {% block body %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

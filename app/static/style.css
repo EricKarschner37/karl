@@ -1,0 +1,40 @@
+.squircle-border {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+span.remove {
+  color: red;
+  float: right;
+}
+
+span.material-icons {
+  user-select: none;
+}
+
+.clickable {
+  cursor: pointer !important;
+}
+
+div.flavor-div {
+  width: 25%;
+  margin: 16px;
+  display: inline-block;
+}
+
+div.flavor-div:hover {
+  background-color: lightgrey;
+}
+
+div.selected-flavor {
+  background-color: darkgrey;
+}
+
+div.selected-flavor:hover {
+  background-color: grey;
+}
+
+.hidden {
+  visibility: none;
+}

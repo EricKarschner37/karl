@@ -1,0 +1,16 @@
+<div id="{{ flavor[0] }}-div" onclick="checkFlavor('{{ flavor[0] }}')" class="clickable flavor-div squircle-border">
+  <p>{{ flavor[1] }}</p>
+  <input type="checkbox" class="hidden" id="{{ flavor[0] }}" name="flavors" value="{{ flavor[0] }}">
+</div>
+
+<script type="text/javascript">
+  function checkFlavor(flavor) {
+      let box = document.getElementById(flavor);
+      box.checked = !box.checked;
+      if (box.checked) {
+        document.getElementById(flavor + "-div").classList.add("selected-flavor");
+      } else {
+        document.getElementById(flavor + "-div").classList.remove("selected-flavor");
+      }
+  }
+</script>
