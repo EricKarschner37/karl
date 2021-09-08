@@ -33,6 +33,7 @@ def order():
     return {'error': 'Something went wrong. Please try again later'}, 500
 
 @app.route("/orders", methods=['GET'])
+@cross_origin(origins=["http://localhost:3000/*"])
 def orders():
     orders = list(mongo.orders.find().sort('ts'))
     return {'orders': json.loads(json_util.dumps(orders))}, 200
