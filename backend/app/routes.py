@@ -14,7 +14,7 @@ def encoder(o):
     return o.__str__
 
 @app.route("/order", methods=['POST', 'DELETE'])
-@cross_origin(origins=["http://localhost:3000/*"])
+@cross_origin(origins=["https://karl-karl.apps.okd4.csh.rit.edu/*"])
 def order():
     if request.method == 'DELETE':
         result = mongo.orders.delete_one({'_id': ObjectId(request.json['id'])})
@@ -33,7 +33,7 @@ def order():
     return {'error': 'Something went wrong. Please try again later'}, 500
 
 @app.route("/orders", methods=['GET'])
-@cross_origin(origins=["http://localhost:3000/*"])
+@cross_origin(origins=["https://karl-karl.apps.okd4.csh.rit.edu/*"])
 def orders():
     orders = list(mongo.orders.find().sort('ts'))
     return {'orders': json.loads(json_util.dumps(orders))}, 200
