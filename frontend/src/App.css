@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+  font-family: roboto;
+}
+
+li {
+  display: inline;
+}
+
+nav {
+  margin-left: auto;
+}
+
+a {
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+a:hover{
+  background-color: #181c24;
+}
+
+.App-header {
+  background-color: #282c34;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+legend {
+  margin: 16px;
+}
+
+fieldset {
+  margin: 32px;
+}
+
+div.order {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
