@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn
 COPY . ./
-ENV REACT_APP_BACKEND_URL="https://karl-karl.apps.okd4.csh.rit.edu"
+ENV REACT_APP_BACKEND_URL="https://karl-api-karl.apps.okd4.csh.rit.edu"
 RUN yarn build
 
 FROM cr.galenguyer.com/nginx/nginx:latest
